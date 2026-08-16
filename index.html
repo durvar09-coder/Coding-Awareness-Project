@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>CodeKids | Coding Awareness Program</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+        💻 CodeKids
+    </div>
+
+    <div class="nav-links">
+
+        <a href="#home">Home</a>
+
+        <a href="#learn">Learn</a>
+
+        <a href="#practice">Practice</a>
+
+        <a href="#game">Game</a>
+
+        <a href="#quiz">Quiz</a>
+
+        <a href="#about">About</a>
+
+    </div>
+
+    <button id="themeBtn">🌙</button>
+
+</nav>
+
+
+<!-- ================= HOME ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            🚀 CODING AWARENESS PROGRAM
+        </div>
+
+        <h1>
+            Learn Coding.<br>
+            <span>Build Your Future.</span>
+        </h1>
+
+        <p>
+            A fun and interactive coding awareness
+            program designed specially for school children.
+        </p>
+
+        <div class="hero-buttons">
+
+            <button onclick="goTo('learn')">
+                🚀 Start Learning
+            </button>
+
+            <button class="secondary"
+                onclick="speak('Welcome to CodeKids. Let us learn coding together!')">
+
+                🔊 Listen
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="hero-emoji">
+        👩‍💻
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT PROGRAM ================= -->
+
+<section class="info-section">
+
+    <div class="section-title">
+
+        <span>💡 ABOUT THE PROGRAM</span>
+
+        <h2>
+            Why should children learn coding?
+        </h2>
+
+        <p>
+            Coding helps children develop logical thinking,
+            creativity and problem-solving skills.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-icon">🧠</div>
+            <h3>Logical Thinking</h3>
+            <p>
+                Learn how to solve problems step by step.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="card-icon">🎨</div>
+            <h3>Creativity</h3>
+            <p>
+                Create games, animations and exciting projects.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="card-icon">💡</div>
+            <h3>Problem Solving</h3>
+            <p>
+                Develop skills to find solutions to problems.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="card-icon">🚀</div>
+            <h3>Future Skills</h3>
+            <p>
+                Build useful digital skills for the future.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LEARN ================= -->
+
+<section id="learn" class="learn-section">
+
+    <div class="section-title">
+
+        <span>📚 LEARN PYTHON</span>
+
+        <h2>
+            Python Basics Made Easy
+        </h2>
+
+        <p>
+            Learn programming through simple examples.
+        </p>
+
+    </div>
+
+
+    <div class="lesson-container">
+
+
+        <!-- PRINT -->
+
+        <div class="lesson-card">
+
+            <div class="lesson-number">
+                01
+            </div>
+
+            <h3>Print Statement</h3>
+
+            <p>
+                The print() function displays information
+                on the screen.
+            </p>
+
+            <div class="code">
+                print("Hello World!")
+            </div>
+
+            <button onclick="runLesson('print')">
+                ▶ Run Example
+            </button>
+
+        </div>
+
+
+        <!-- INPUT -->
+
+        <div class="lesson-card">
+
+            <div class="lesson-number">
+                02
+            </div>
+
+            <h3>User Input</h3>
+
+            <p>
+                The input() function allows users to
+                enter information.
+            </p>
+
+            <div class="code">
+                name = input("Enter name: ")
+            </div>
+
+            <button onclick="inputExample()">
+                ▶ Try Example
+            </button>
+
+        </div>
+
+
+        <!-- LOOP -->
+
+        <div class="lesson-card">
+
+            <div class="lesson-number">
+                03
+            </div>
+
+            <h3>Loops</h3>
+
+            <p>
+                Loops are used to repeat instructions.
+            </p>
+
+            <div class="code">
+                for i in range(5):
+                print("Hi")
+            </div>
+
+            <button onclick="loopExample()">
+                ▶ Run Loop
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div id="lessonOutput"
+        class="lesson-output">
+
+        Output will appear here...
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRACTICE ================= -->
+
+<section id="practice" class="practice-section">
+
+    <div class="section-title">
+
+        <span>💻 PRACTICE</span>
+
+        <h2>
+            Try Your Own Code
+        </h2>
+
+        <p>
+            Write a simple Python print statement.
+        </p>
+
+    </div>
+
+
+    <div class="playground">
+
+        <div>
+
+            <h3>Python Code</h3>
+
+            <textarea id="codeBox"
+                placeholder='print("Hello Students!")'>print("Hello Students!")</textarea>
+
+            <button onclick="runCode()">
+                ▶ Run Code
+            </button>
+
+        </div>
+
+
+        <div>
+
+            <h3>Output</h3>
+
+            <div id="output"
+                class="output-box">
+
+                Output will appear here...
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GAME ================= -->
+
+<section id="game" class="game-section">
+
+    <div class="section-title">
+
+        <span>🎮 CODING GAME</span>
+
+        <h2>
+            Guess the Output!
+        </h2>
+
+        <p>
+            Choose what this Python program will display.
+        </p>
+
+    </div>
+
+
+    <div class="game-box">
+
+        <div class="code large-code">
+
+            print("Hello! Shrushti")
+
+        </div>
+
+
+        <h3>
+            What will be displayed?
+        </h3>
+
+
+        <div class="game-options">
+
+            <button onclick="game(true)">
+                Hello! Shrusti
+            </button>
+
+            <button onclick="game(false)">
+                Hello Python
+            </button>
+
+            <button onclick="game(false)">
+                Shrushti
+            </button>
+
+            <button onclick="game(false)">
+                Error
+            </button>
+
+        </div>
+
+
+        <div id="gameResult"></div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= QUIZ ================= -->
+
+<section id="quizSection" class="quiz-section">
+
+    <div class="section-title">
+
+        <span>🧠 KNOWLEDGE CHECK</span>
+
+        <h2>
+            Coding Quiz
+        </h2>
+
+        <p>
+            Answer all 10 simple questions.
+        </p>
+
+    </div>
+
+
+    <div class="quiz-box">
+
+        <div id="quiz">
+
+            <!-- Questions are inserted by JavaScript -->
+
+        </div>
+
+
+        <button id="next"
+            class="next-button"
+            onclick="nextQuestion()">
+
+            Next Question →
+
+        </button>
+
+
+        <div id="score"
+            class="score-message">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CERTIFICATE ================= -->
+
+<section id="about" class="certificate-section">
+
+    <div class="section-title">
+
+        <span>🏆 ACHIEVEMENT</span>
+
+        <h2>
+            Certificate
+        </h2>
+
+        <p>
+            Complete the quiz and enter your name.
+        </p>
+
+    </div>
+
+
+    <div class="certificate-box">
+
+        <input
+            type="text"
+            id="studentName"
+            placeholder="Enter your name">
+
+
+        <button onclick="certificate()">
+            🎓 Get Certificate
+        </button>
+
+
+        <div id="certificateMessage">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECT INFO ================= -->
+
+<section class="project-section">
+
+    <div class="section-title">
+
+        <span>🌟 OUR CEP PROJECT</span>
+
+        <h2>
+            Coding Awareness Program for School Children
+        </h2>
+
+    </div>
+
+
+    <div class="project-content">
+
+        <p>
+            This website is developed as part of our
+            Community Engagement Project (CEP).
+        </p>
+
+        <p>
+            Our aim is to introduce school children
+            to basic programming concepts in a simple,
+            interactive and enjoyable way.
+        </p>
+
+
+        <div class="members">
+
+            <h3>👩‍💻 Group Members</h3>
+
+            <p>Durva Raut – Roll No. 21</p>
+
+            <p>Prachi Pawade – Roll No. 17</p>
+
+            <p>Vaishnavi Kashid – Roll No. 07</p>
+
+            <p>Manasi Tandel – Roll No. 42</p>
+
+        </div>
+
+
+        <div class="places">
+
+            <h3>🏫 Awareness Program Places</h3>
+
+            <p>1. M.B. Joshi English Medium School, Chinchani</p>
+
+            <p>2.Keshav Arjun Vidhya Mandir School, Varor</p>
+
+            <p>3. JMT High School, Vangaon</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>💻 CodeKids</h3>
+
+    <p>
+        Coding Awareness Program for School Children
+    </p>
+
+    <p>
+        CEP Project | 2026
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
